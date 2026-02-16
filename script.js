@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card">
                 <img src="images/aliexpress.png" alt="AliExpress Logo">
                 <h4>AliExpress</h4>
-                <a href="https://s.click.aliexpress.com/e/_c3R0eNaf?SearchText=${query}" target="_blank">
+                <a href="https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=${query}" target="_blank">
                     Search
                 </a>
             </div>
         `;
     }
 
-    // Button click
+    // Expose function for button
     window.searchProduct = searchProduct;
 
     // Enter key
