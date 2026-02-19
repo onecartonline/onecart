@@ -24,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card">
                 <img src="image/aliexpress.png" alt="AliExpress Logo">
                 <h4>AliExpress</h4>
-                <a href="https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=${query}" target="_blank">
-                    Search
-                </a>
+                <a href="https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=${query}" target="_blank" rel="noopener noreferrer">Search</a>
             </div>
         `;
     }
@@ -42,4 +40,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
 
