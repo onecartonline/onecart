@@ -10,19 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("results").innerHTML = `
             <div class="card">
-                <img src="images/jumia.png" alt="Jumia Logo">
+                <img src="image/jumia.png" alt="Jumia Logo">
                 <h4>Jumia</h4>
                 <a href="#" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <img src="images/kilimall.png" alt="Kilimall Logo">
+                <img src="image/kilimal.png" alt="Kilimall Logo">
                 <h4>Kilimall</h4>
                 <a href="#" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <img src="images/aliexpress.png" alt="AliExpress Logo">
+                <img src="image/aliexpress.png" alt="AliExpress Logo">
                 <h4>AliExpress</h4>
                 <a href="https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=${query}" target="_blank">
                     Search
@@ -42,3 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
