@@ -1,27 +1,30 @@
 /* Body & global styles */
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
     margin: 0;
     text-align: center;
     color: #333;
     padding: 20px;
 }
 
-/* Header */
+/* Header / Hero */
 header {
-    background: #2c3e50;
+    background: #3498db;  /* bright blue */
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 header h1 {
     font-size: 2.5em;
+    margin: 0;
 }
 
 header p {
     font-size: 1.1em;
-    margin-top: 5px;
+    margin: 5px 0;
 }
 
 /* Search box */
@@ -30,7 +33,7 @@ header p {
 }
 
 .search-box input {
-    padding: 10px;
+    padding: 12px;
     width: 250px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -38,11 +41,118 @@ header p {
 }
 
 .search-box button {
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
-    background: #3498db;
+    background: #2c80d9;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background: #1a5f9e;
+}
+
+/* Results layout */
+#results {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card styles */
+.card {
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    color: #333;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Card image */
+.card img {
+    width: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+/* Card title */
+.card h4 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+}
+
+/* Card description */
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Card button/link */
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.card a:hover {
+    background: #1a5f9e;
+    transform: scale(1.05);
+}
+
+/* Individual card background colors */
+.card:nth-child(1) { background: #ffe6e6; } /* Jumia - light red */
+.card:nth-child(2) { background: #e6f7ff; } /* Kilimall - light blue */
+.card:nth-child(3) { background: #fff0e6; } /* AliExpress - light orange */
+.card:nth-child(4) { background: #e6ffe6; } /* Amazon - light green */
+.card:nth-child(5) { background: #f0e6ff; } /* eBay - light purple */
+.card:nth-child(6) { background: #fff5e6; } /* Shein - light peach */
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .search-box input {
+        width: 70%;
+    }
+
+    .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 70px;
+    }
+}    border-radius: 5px;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -125,3 +235,19 @@ header p {
         width: 70px;
     }
 }
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo-circle img {
+    width: 60%;
+    height: auto;
+    }
