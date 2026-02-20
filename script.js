@@ -22,10 +22,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="card">
                 <div class="logo-circle">
+                    <img src="image/kilimal.png" alt="Kilimall Logo">
+                </div>
+                <h4>Kilimall</h4>
+                <a href="https://www.kilimall.co.ke/catalogsearch/result/?q=${encodeURIComponent(query)}" target="_blank">Search</a>
+            </div>
+
+            <div class="card">
+                <div class="logo-circle">
+                    <img src="image/aliexpress.png" alt="AliExpress Logo">
+                </div>
+                <h4>AliExpress</h4>
+                <a href="https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=${encodeURIComponent(query)}" target="_blank">Search</a>
+            </div>
+
+            <div class="card">
+                <div class="logo-circle">
                     <img src="image/amazon.png" alt="Amazon Logo">
                 </div>
                 <h4>Amazon AE</h4>
                 <a href="https://www.amazon.ae/s?k=${encodeURIComponent(query)}" target="_blank">Search</a>
+            </div>
+
+            <div class="card">
+                <div class="logo-circle">
+                    <img src="image/ebay.png" alt="eBay Logo">
+                </div>
+                <h4>eBay</h4>
+                <a href="https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
 
             <div class="card">
@@ -38,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    // Make button work
+    // Make Search button work
     window.searchProduct = searchProduct;
 
     // Make Enter key work
