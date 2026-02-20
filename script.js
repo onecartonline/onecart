@@ -63,6 +63,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+});                <a href="https://www.amazon.ae/s?k=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
+            </div>
+
+            <div class="card" style="background:#f0e6ff;">
+                <div class="logo-circle"><img src="image/ebay.png" alt="eBay Logo"></div>
+                <h4>eBay</h4>
+                <p>Worldwide marketplace for buyers & sellers</p>
+                <a href="https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
+            </div>
+
+            <div class="card" style="background:#fff5e6;">
+                <div class="logo-circle"><img src="image/shein.png.jpg" alt="Shein Logo"></div>
+                <h4>Shein</h4>
+                <p>Trendy fashion & accessories</p>
+                <a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
+            </div>
+        `;
+    }
+
+    // Expose function for button
+    window.searchProduct = searchProduct;
+
+    // Enter key triggers search
+    document.getElementById("searchInput").addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            searchProduct();
+        }
+    });
+
 });    display: flex;
     justify-content: center;
     gap: 20px;
@@ -159,3 +188,4 @@ footer {
         width: 70px;
     }
         }
+
