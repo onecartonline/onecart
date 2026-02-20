@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <div class="card">
-                <img src="image/shein.png" alt="Shein Logo">
+                <img src="image/shein.png.jpg" alt="Shein Logo">
                 <h4>Shein (Worldwide)</h4>
                 <a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search on Shein</a>
             </div>
@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
