@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>OneCart - All Shops in One Place</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="verify-admitad" content="5e0ae67a0c" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Hero -->
     <header>
         <h1>🛒 OneCart</h1>
-        <p>Compare prices from local & global stores in one click.</p>
-        <p>Search products from Jumia, Kilimall, AliExpress, Amazon, eBay & Shein</p>
+        <p>Compare prices from all your favorite stores in one click</p>
     </header>
 
-    <!-- Search Box -->
     <div class="search-box">
         <input type="text" id="searchInput" placeholder="Search for a product..." />
         <button type="button" onclick="searchProduct()">Search</button>
     </div>
 
-    <!-- Search Results -->
-    <div id="results"></div>
+    <div id="loading" class="loading" style="display:none;">
+        Searching stores...
+    </div>
 
-    <!-- Footer -->
+    <div id="results" class="results"></div>
+
     <footer>
-        <p>© 2026 OneCart | Compare prices & shop smarter</p>
+        © 2026 OneCart | Shop Smarter
     </footer>
 
     <script src="script.js"></script>
