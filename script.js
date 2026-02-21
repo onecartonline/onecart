@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function searchProduct() {
         const input = document.getElementById("searchInput");
         const results = document.getElementById("results");
+        const loading = document.getElementById("loading");
 
         const query = input.value.trim();
 
@@ -11,61 +12,37 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        results.innerHTML = `
-            <div class="card">
-                <div class="logo-circle">
-                    <img src="image/jumia.png" alt="Jumia Logo">
-                </div>
-                <h4>Jumia</h4>
-                <a href="https://www.jumia.com/search/?q=${encodeURIComponent(query)}" target="_blank">Search</a>
-            </div>
+        results.innerHTML = "";
+        loading.style.display = "block";
 
-            <div class="card">
-                <div class="logo-circle">
-                    <img src="image/kilimal.png" alt="Kilimall Logo">
-                </div>
-                <h4>Kilimall</h4>
-                <a href="https://www.kilimall.co.ke/catalogsearch/result/?q=${encodeURIComponent(query)}" target="_blank">Search</a>
-            </div>
+        setTimeout(() => {
+            loading.style.display = "none";
 
-            <div class="card">
-                <div class="logo-circle">
-                    <img src="image/aliexpress.png" alt="AliExpress Logo">
-                </div>
-                <h4>AliExpress</h4>
-                <a href="https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=${encodeURIComponent(query)}" target="_blank">Search</a>
-            </div>
+            results.innerHTML = `
+                ${createCard("Jumia", "image/jumia.png", "https://www.jumia.com/search/?q=" + query)}
+                ${createCard("Kilimall", "image/kilimal.png", "https://www.kilimall.co.ke/catalogsearch/result/?q=" + query)}
+                ${createCard("AliExpress", "image/aliexpress.png", "https://rzekl.com/g/1e8d1144945e0ae67a0c16525dc3e8/?SearchText=" + query)}
+                ${createCard("Amazon AE", "image/amazon.png", "https://www.amazon.ae/s?k=" + query)}
+                ${createCard("eBay", "image/ebay.png", "https://www.ebay.com/sch/i.html?_nkw=" + query)}
+                ${createCard("Shein", "image/shein.png.jpg", "https://www.shein.com/search?keyword=" + query)}
+            `;
+        }, 800);
+    }
 
+    function createCard(name, image, link) {
+        return `
             <div class="card">
                 <div class="logo-circle">
-                    <img src="image/amazon.png" alt="Amazon Logo">
+                    <img src="${image}" alt="${name}">
                 </div>
-                <h4>Amazon AE</h4>
-                <a href="https://www.amazon.ae/s?k=${encodeURIComponent(query)}" target="_blank">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle">
-                    <img src="image/ebay.png" alt="eBay Logo">
-                </div>
-                <h4>eBay</h4>
-                <a href="https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}" target="_blank">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle">
-                    <img src="image/shein.png.jpg" alt="Shein Logo">
-                </div>
-                <h4>Shein</h4>
-                <a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank">Search</a>
+                <h4>${name}</h4>
+                <a href="${link}" target="_blank">Search</a>
             </div>
         `;
     }
 
-    // Make Search button work
     window.searchProduct = searchProduct;
 
-    // Make Enter key work
     document.getElementById("searchInput").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             searchProduct();
