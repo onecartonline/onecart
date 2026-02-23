@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G82CMSSC3N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-G82CMSSC3N');
-    </script>
-    <!-- End Google Analytics -->
-
     <meta charset="UTF-8">
+    <title>OneCart - All Shops in One Place</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="verify-admitad" content="5e0ae67a0c" />
-    <title>OneCart - All Shops in One Place</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,10 +19,11 @@
     <!-- Search Box -->
     <div class="search-box">
         <input type="text" id="searchInput" placeholder="Search for a product..." />
-        <button type="button" onclick="searchProduct()">Search</button>
+        <button type="button" id="searchBtn">Search</button>
     </div>
 
-    <!-- Search Results -->
+    <!-- Results -->
+    <h3 class="section-title">Available Stores</h3>
     <div id="results" class="results"></div>
 
     <!-- Footer -->
@@ -40,6 +31,7 @@
         © 2026 OneCart | Shop Smarter
     </footer>
 
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
