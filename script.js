@@ -1,21 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // SEARCH CODE HERE
-
-    const toggleBtn = document.getElementById("darkModeToggle");
-
-    toggleBtn.addEventListener("click", function () {
-        document.body.classList.toggle("dark");
-    });
-
-});
-
     const searchInput = document.getElementById("searchInput");
     const searchBtn = document.getElementById("searchBtn");
     const results = document.getElementById("results");
+    const toggleBtn = document.getElementById("darkModeToggle");
 
+    // SEARCH FUNCTION
     function searchProduct() {
         const query = searchInput.value.trim();
+
         if (!query) {
             alert("Please enter a product name");
             return;
@@ -23,37 +16,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
         results.innerHTML = `
             <div class="card">
-                <div class="logo-circle"><img src="image/jumia.png" alt="Jumia Logo"></div>
+                <img src="image/jumia.png" alt="Jumia">
                 <h4>Jumia</h4>
                 <a href="https://www.jumia.com/search/?q=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <div class="logo-circle"><img src="image/kilimal.png" alt="Kilimall Logo"></div>
+                <img src="image/kilimal.png" alt="Kilimall">
                 <h4>Kilimall</h4>
                 <a href="https://www.kilimall.co.ke/catalogsearch/result/?q=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <div class="logo-circle"><img src="image/aliexpress.png" alt="AliExpress Logo"></div>
+                <img src="image/aliexpress.png" alt="AliExpress">
                 <h4>AliExpress</h4>
                 <a href="https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <div class="logo-circle"><img src="image/amazon.png" alt="Amazon Logo"></div>
+                <img src="image/amazon.png" alt="Amazon">
                 <h4>Amazon AE</h4>
                 <a href="https://www.amazon.ae/s?k=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <div class="logo-circle"><img src="image/ebay.png" alt="eBay Logo"></div>
+                <img src="image/ebay.png" alt="eBay">
                 <h4>eBay</h4>
                 <a href="https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
 
             <div class="card">
-                <div class="logo-circle"><img src="image/shein.png" alt="Shein Logo"></div>
+                <img src="image/shein.png" alt="Shein">
                 <h4>Shein</h4>
                 <a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank">Search</a>
             </div>
@@ -61,9 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     searchBtn.addEventListener("click", searchProduct);
+
     searchInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") searchProduct();
+        if (event.key === "Enter") {
+            searchProduct();
+        }
+    });
+
+    // DARK MODE
+    toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
     });
 
 });
-
