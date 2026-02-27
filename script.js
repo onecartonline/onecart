@@ -8,74 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Dark mode toggle
     darkToggle.addEventListener("click", function() {
         document.body.classList.toggle("dark");
-        if (document.body.classList.contains("dark")) {
-            darkToggle.textContent = "☀ Light Mode";
-        } else {
-            darkToggle.textContent = "🌙 Dark Mode";
-        }
+        darkToggle.textContent = document.body.classList.contains("dark") ? "☀ Light Mode" : "🌙 Dark Mode";
     });
 
     // Search function
     function searchProduct() {
         const query = searchInput.value.trim();
-        if (!query) {
-            alert("Please enter a product name");
-            return;
-        }
+        if (!query) { alert("Please enter a product name"); return; }
 
         results.innerHTML = `
-            <div class="card">
-                <div class="logo-circle"><img src="image/jumia.png" alt="Jumia Logo"></div>
-                <h4>Jumia</h4>
-                <p>Popular African online marketplace</p>
-                <a href="https://www.jumia.com/search/?q=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle"><img src="image/kilimal.png" alt="Kilimall Logo"></div>
-                <h4>Kilimall</h4>
-                <p>Affordable products in Kenya</p>
-                <a href="https://www.kilimall.co.ke/catalogsearch/result/?q=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle"><img src="image/aliexpress.png" alt="AliExpress Logo"></div>
-                <h4>AliExpress</h4>
-                <p>Global online marketplace with deals</p>
-                <a href="https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle"><img src="image/amazon.png" alt="Amazon Logo"></div>
-                <h4>Amazon AE</h4>
-                <p>Trusted UAE online store</p>
-                <a href="https://www.amazon.ae/s?k=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle"><img src="image/ebay.png" alt="eBay Logo"></div>
-                <h4>eBay</h4>
-                <p>Worldwide marketplace for buyers & sellers</p>
-                <a href="https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
-            </div>
-
-            <div class="card">
-                <div class="logo-circle"><img src="image/shein.png" alt="Shein Logo"></div>
-                <h4>Shein</h4>
-                <p>Trendy fashion & accessories</p>
-                <a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
-            </div>
+            <div class="card"><img src="image/jumia.png" alt="Jumia"><h4>Jumia</h4><p>Popular African online marketplace</p><a href="https://www.jumia.com/search/?q=${encodeURIComponent(query)}" target="_blank">Search</a></div>
+            <div class="card"><img src="image/kilimal.png" alt="Kilimall"><h4>Kilimall</h4><p>Affordable products in Kenya</p><a href="https://www.kilimall.co.ke/catalogsearch/result/?q=${encodeURIComponent(query)}" target="_blank">Search</a></div>
+            <div class="card"><img src="image/aliexpress.png" alt="AliExpress"><h4>AliExpress</h4><p>Global online marketplace with deals</p><a href="https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}" target="_blank">Search</a></div>
+            <div class="card"><img src="image/amazon.png" alt="Amazon AE"><h4>Amazon AE</h4><p>Trusted UAE online store</p><a href="https://www.amazon.ae/s?k=${encodeURIComponent(query)}" target="_blank">Search</a></div>
+            <div class="card"><img src="image/ebay.png" alt="eBay"><h4>eBay</h4><p>Worldwide marketplace</p><a href="https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(query)}" target="_blank">Search</a></div>
+            <div class="card"><img src="image/shein.png" alt="Shein"><h4>Shein</h4><p>Trendy fashion & accessories</p><a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank">Search</a></div>
         `;
     }
 
-    // Button click
     searchBtn.addEventListener("click", searchProduct);
-
-    // Enter key press
-    searchInput.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            searchProduct();
-        }
-    });
+    searchInput.addEventListener("keydown", function(e) { if(e.key==="Enter") searchProduct(); });
 
 });
