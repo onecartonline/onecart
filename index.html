@@ -2,36 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OneCart - All Shops in One Place</title>
+    <title>OneCart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="verify-admitad" content="5e0ae67a0c" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>🛒 OneCart</h1>
-        <p>Compare prices from all your favorite stores in one click</p>
-        <button id="darkModeToggle">🌙 Dark Mode</button>
+    <div class="container">
+        <h1>OneCart 🔍</h1>
 
-    <!-- Search Box -->
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search for a product..." />
-        <button type="button" id="searchBtn">Search</button>
+        <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search product...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="results" class="results"></div>
     </div>
 
-    <!-- Results -->
-    <h3 class="section-title">Available Stores</h3>
-    <div id="results" class="results"></div>
-
-    <!-- Footer -->
-    <footer>
-        © 2026 OneCart | Shop Smarter
-    </footer>
-
-    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
-
