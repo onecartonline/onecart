@@ -1,15 +1,11 @@
-/* ================= */
-/* GENERAL STYLING   */
-/* ================= */
-
+/* ===== General Styles ===== */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     text-align: center;
     background: linear-gradient(135deg, #ffecd2, #fcb69f);
     color: #333;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.3s;
 }
 
 header {
@@ -18,7 +14,6 @@ header {
 
 .heading-decor {
     font-size: 48px;
-    font-weight: bold;
     color: #ff6b81;
     text-shadow: 2px 2px 5px #ffe6e6;
 }
@@ -35,6 +30,143 @@ header {
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    background: #ff6b81;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#darkToggle:hover {
+    background: #ff3b5c;
+}
+
+/* ===== Search Box ===== */
+.search-box {
+    margin: 20px auto;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 70%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #f6c23e;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #dda20a;
+}
+
+/* ===== Results Cards ===== */
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    width: 180px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin: 10px 0 5px 0;
+    color: #ff6b81;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #1dd1a1;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.card a:hover {
+    transform: scale(1.05);
+    background: #10ac84;
+}
+
+/* Card background colors */
+.card:nth-child(1) { background: #ffe6e6; }
+.card:nth-child(2) { background: #e6f7ff; }
+.card:nth-child(3) { background: #fff0e6; }
+.card:nth-child(4) { background: #e6ffe6; }
+.card:nth-child(5) { background: #f0e6ff; }
+.card:nth-child(6) { background: #fff5e6; }
+
+/* ===== Footer ===== */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 15px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f1f5f9;
+}
+
+body.dark header h1 { color: #60a5fa; text-shadow: 1px 1px 3px #1e293b; }
+body.dark .subheading { color: #cbd5e1; }
+body.dark #darkToggle { background: #2563eb; color: white; }
+body.dark .search-box input { background: #1e293b; color: white; border: 1px solid #334155; }
+body.dark .card { background: #1e293b; color: #f1f5f9; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+body.dark .card a { background: #60a5fa; }
+body.dark .card a:hover { background: #2563eb; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .search-box input { width: 70%; }
+    .card { width: 45%; margin-bottom: 20px; }
+    .card img { width: 70px; }
+}    cursor: pointer;
     background: #ff6b81;
     color: white;
     font-weight: bold;
@@ -183,3 +315,4 @@ body.dark .card a {
 body.dark .card a:hover {
     background: #2563eb;
     }
+
