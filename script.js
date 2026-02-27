@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // SEARCH CODE HERE
+
+    const toggleBtn = document.getElementById("darkModeToggle");
+
+    toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
+    });
+
+});
+
     const searchInput = document.getElementById("searchInput");
     const searchBtn = document.getElementById("searchBtn");
     const results = document.getElementById("results");
@@ -56,3 +66,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
