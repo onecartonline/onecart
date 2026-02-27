@@ -1,4 +1,3 @@
-alert("JavaScript is working");
 document.addEventListener("DOMContentLoaded", function () {
 
     const searchInput = document.getElementById("searchInput");
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <div class="card" style="background:#fff5e6;">
-                <div class="logo-circle"><img src="image/shein.png.jpg" alt="Shein Logo"></div>
+                <div class="logo-circle"><img src="image/shein.png" alt="Shein Logo"></div>
                 <h4>Shein</h4>
                 <p>Trendy fashion & accessories</p>
                 <a href="https://www.shein.com/search?keyword=${encodeURIComponent(query)}" target="_blank" rel="noopener noreferrer">Search</a>
@@ -68,4 +67,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
 
