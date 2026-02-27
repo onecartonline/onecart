@@ -1,3 +1,4 @@
+alert("JavaScript is working");
 document.addEventListener("DOMContentLoaded", function () {
 
     const searchInput = document.getElementById("searchInput");
@@ -67,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
